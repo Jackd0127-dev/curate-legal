@@ -1,0 +1,49 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://novasagency.com/CurateApp/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/privacy",
+      "destination": "https://novasagency.com/CurateApp/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/privacy/",
+      "destination": "https://novasagency.com/CurateApp/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/terms",
+      "destination": "https://novasagency.com/CurateApp/terms-of-service/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/terms/",
+      "destination": "https://novasagency.com/CurateApp/terms-of-service/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/help",
+      "destination": "https://novasagency.com/CurateApp/support/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/curate/help/",
+      "destination": "https://novasagency.com/CurateApp/support/",
+      "permanent": true
+    },
+    {
+      "source": "/CurateApp",
+      "destination": "https://novasagency.com/CurateApp/",
+      "permanent": true
+    },
+    {
+      "source": "/CurateApp/:path*",
+      "destination": "https://novasagency.com/CurateApp/:path*",
+      "permanent": true
+    }
+  ]
+}

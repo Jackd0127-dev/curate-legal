@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curate — Terms of Service</title>
+<link rel="icon" href="../../../assets/curate-app-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&amp;family=Josefin+Sans:wght@200;300;400&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1A1108;
+    --ink-soft: #4E4034;
+    --muted: #7B6E61;
+    --gold: #D4A843;
+    --deep-gold: #B5842A;
+    --sand: #F8F3EA;
+    --cream: #FFF8E8;
+    --line: rgba(26, 17, 8, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--sand);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+      linear-gradient(180deg, rgba(255, 248, 232, 0.9), rgba(248, 243, 234, 0.96)),
+      var(--sand);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.72;
+    text-rendering: optimizeLegibility;
+  }
+
+  .legal-page {
+    width: min(100% - 48px, 1160px);
+    margin: 0 auto;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 22px 0;
+    backdrop-filter: blur(18px);
+    background: rgba(248, 243, 234, 0.78);
+    border-bottom: 1px solid rgba(26, 17, 8, 0.08);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--deep-gold);
+    text-decoration: none;
+    border: none;
+  }
+
+  .brand img {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(92, 58, 23, 0.12);
+  }
+
+  .brand span {
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.32em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .nav a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+
+  .nav a:hover,
+  .nav a:focus-visible {
+    color: var(--deep-gold);
+    border-color: rgba(181, 132, 42, 0.32);
+    outline: none;
+  }
+
+  .wrap {
+    width: min(100%, 880px);
+    margin: 0 auto;
+    padding: 0 0 88px;
+  }
+
+  .doc-header {
+    padding: 64px 0 38px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 38px;
+  }
+
+  .app-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: var(--gold);
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .app-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  h1 {
+    max-width: 620px;
+    color: var(--ink);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(44px, 8vw, 72px);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 0.98;
+    margin-bottom: 18px;
+  }
+
+  h1 em {
+    color: var(--deep-gold);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .doc-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border: 1px solid rgba(26, 17, 8, 0.22);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  .button-primary {
+    background: linear-gradient(180deg, #DAB45A, var(--deep-gold));
+    color: #FFFDF8;
+    border-color: rgba(181, 132, 42, 0.45);
+    box-shadow: 0 16px 32px rgba(181, 132, 42, 0.2);
+  }
+
+  .button-secondary {
+    background: rgba(255, 253, 248, 0.62);
+    color: var(--ink);
+  }
+
+  .button-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+  }
+
+  .intro {
+    max-width: 760px;
+    margin: 0 0 36px;
+    color: var(--ink-soft);
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 400;
+    line-height: 1.58;
+  }
+
+  section {
+    padding: 34px 0 36px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section:last-of-type {
+    border-bottom: none;
+  }
+
+  .section-number {
+    margin-bottom: 12px;
+    color: var(--deep-gold);
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 720px;
+    margin-bottom: 18px;
+    color: var(--ink);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.05;
+  }
+
+  p {
+    max-width: 760px;
+    margin-bottom: 16px;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  ul {
+    display: grid;
+    gap: 10px;
+    max-width: 760px;
+    margin: 18px 0 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--ink-soft);
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    top: 0.76em;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--gold);
+  }
+
+  ul ul {
+    margin: 8px 0 0 16px;
+  }
+
+  a {
+    color: var(--deep-gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(181, 132, 42, 0.28);
+    transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--ink);
+    border-color: var(--ink);
+    outline: none;
+  }
+
+  .brand:hover,
+  .brand:focus-visible {
+    color: var(--deep-gold);
+    border: none;
+    outline: none;
+  }
+
+  a.button {
+    border: 1px solid rgba(26, 17, 8, 0.22);
+  }
+
+  a.button-primary,
+  a.button-primary:hover,
+  a.button-primary:focus-visible {
+    color: #FFFDF8;
+    border-color: rgba(181, 132, 42, 0.45);
+  }
+
+  a.button-secondary,
+  a.button-secondary:hover,
+  a.button-secondary:focus-visible {
+    color: var(--ink);
+  }
+
+  code {
+    padding: 2px 7px;
+    border: 1px solid rgba(181, 132, 42, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 248, 232, 0.75);
+    color: var(--ink);
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+    font-size: 0.88em;
+  }
+
+  .contact-block {
+    max-width: 760px;
+    margin-top: 16px;
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 253, 248, 0.72);
+  }
+
+  .contact-block a {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .legal-note {
+    max-width: 760px;
+    margin: 18px 0 20px;
+    padding: 22px 24px;
+    border: 1px solid rgba(181, 132, 42, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 253, 248, 0.72);
+  }
+
+  .legal-note p:last-child {
+    margin-bottom: 0;
+  }
+
+  .toc {
+    margin: 0 0 18px;
+    padding: 24px 0 28px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .toc-title {
+    margin-bottom: 16px;
+    color: var(--deep-gold);
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .toc ol {
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .toc ol li {
+    counter-increment: toc;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .toc ol li::before {
+    content: counter(toc, decimal-leading-zero) ". ";
+    color: var(--gold);
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .toc ol li a {
+    color: var(--ink-soft);
+    border: none;
+  }
+
+  .toc ol li a:hover,
+  .toc ol li a:focus-visible {
+    color: var(--deep-gold);
+  }
+
+  .support-callout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    margin: 44px 0 8px;
+    padding: 28px 30px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255, 253, 248, 0.74);
+    box-shadow: 0 24px 70px rgba(92, 58, 23, 0.08);
+  }
+
+  .support-callout h2 {
+    margin-bottom: 10px;
+  }
+
+  .support-callout p {
+    margin-bottom: 0;
+  }
+
+  .callout-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 30px 0 38px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-links a {
+    color: var(--muted);
+    border: none;
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:focus-visible {
+    color: var(--deep-gold);
+    border-color: rgba(181, 132, 42, 0.35);
+  }
+
+  .ornament {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+    body {
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .legal-page {
+      width: min(100% - 32px, 560px);
+    }
+
+    .site-header {
+      position: static;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 14px;
+      padding: 16px 0;
+    }
+
+    .brand span {
+      font-size: 14px;
+      letter-spacing: 0.22em;
+    }
+
+    .nav {
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .wrap {
+      width: 100%;
+      padding-bottom: 68px;
+    }
+
+    .doc-header {
+      padding: 42px 0 30px;
+      margin-bottom: 30px;
+    }
+
+    .doc-actions,
+    .callout-actions {
+      display: grid;
+      width: 100%;
+    }
+
+    .button {
+      width: 100%;
+      min-height: 48px;
+    }
+
+    .toc ol {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    section {
+      padding: 30px 0;
+    }
+
+    .support-callout {
+      grid-template-columns: 1fr;
+      padding: 24px 20px;
+    }
+
+    .site-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="legal-page">
+  <header class="site-header" aria-label="Curate website navigation">
+    <a class="brand" href="../../../" aria-label="Curate home">
+      <img src="../../../assets/curate-app-icon.png" alt="" width="38" height="38">
+      <span>Curate</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../../../#features">Features</a>
+      <a href="../../../#privacy">Privacy</a>
+      <a href="../../../#download">Download</a>
+      <a href="../../../#legal">Legal</a>
+    </nav>
+  </header>
+
+<main class="wrap">
+
+  <header class="doc-header">
+    <div class="app-label">Curate</div>
+    <h1>Terms of <em>Service</em></h1>
+    <div class="meta">Effective date — 12 June 2026</div>
+    <div class="doc-actions">
+      <a class="button button-primary" href="../../../">
+        <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h13M12 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Curate website
+      </a>
+      <a class="button button-secondary" href="../help/">
+        <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 6.5h14v9H8l-3 3v-12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        Contact support
+      </a>
+    </div>
+  </header>
+
+  <p class="intro">These Terms of Service govern your use of the Curate mobile application. By downloading, accessing, or using the App, you agree to these Terms.</p>
+
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Eligibility</a></li>
+      <li><a href="#s2">The App</a></li>
+      <li><a href="#s3">Photos &amp; Permissions</a></li>
+      <li><a href="#s3a">Local Notifications</a></li>
+      <li><a href="#s4">Deletion &amp; Library Changes</a></li>
+      <li><a href="#s4a">Curate Plus</a></li>
+      <li><a href="#s5">License</a></li>
+      <li><a href="#s6">Third-Party Services</a></li>
+      <li><a href="#s7">Feature Changes</a></li>
+      <li><a href="#s8">Privacy</a></li>
+      <li><a href="#s9">Disclaimers</a></li>
+      <li><a href="#s10">Limitation of Liability</a></li>
+      <li><a href="#s11">Indemnity</a></li>
+      <li><a href="#s12">Termination</a></li>
+      <li><a href="#s13">Governing Law</a></li>
+      <li><a href="#s14">Changes to Terms</a></li>
+      <li><a href="#s15">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="s1">
+    <div class="section-number">Section 01</div>
+    <h2>Eligibility</h2>
+    <p>You may use the App only if you are legally permitted to do so under applicable law. If you use the App on behalf of an organisation, you represent that you have authority to bind that organisation to these Terms.</p>
+  </section>
+
+  <section id="s2">
+    <div class="section-number">Section 02</div>
+    <h2>The App</h2>
+    <p>Curate is a photo-organisation app that works with your Apple Photos library. The App allows you to:</p>
+    <ul>
+      <li>browse years, months, albums, favourites, and utility groupings;</li>
+      <li>sort photos and videos;</li>
+      <li>keep, skip, favourite, or queue items for deletion review;</li>
+      <li>create and manage albums in Apple Photos;</li>
+      <li>add items to albums in Apple Photos;</li>
+      <li>optionally enable local reminder notifications on your device; and</li>
+      <li>purchase or restore premium access where paid features are offered.</li>
+    </ul>
+  </section>
+
+  <section id="s3">
+    <div class="section-number">Section 03</div>
+    <h2>Your Photos Library and Device Permissions</h2>
+    <p>Certain App features require permission to access and modify your Apple Photos library.</p>
+    <p>You are responsible for:</p>
+    <ul>
+      <li>granting only the permissions you want to grant;</li>
+      <li>reviewing actions before confirming them;</li>
+      <li>understanding that changes made through the App may affect your Apple Photos library directly; and</li>
+      <li>maintaining your own backup practices if you want additional protection for your library.</li>
+    </ul>
+  </section>
+
+  <section id="s3a">
+    <div class="section-number">Section 03A</div>
+    <h2>Local Notifications</h2>
+    <p>If you enable reminders in Curate, the App may schedule local notifications on your device, such as reminders to return to the App and continue sorting your photo library.</p>
+    <p>These reminders are scheduled locally on your device and are not remote push notifications. You can disable notifications at any time in the App or in your iOS Settings.</p>
+  </section>
+
+  <section id="s4">
+    <div class="section-number">Section 04</div>
+    <h2>Deletion and Library Changes</h2>
+    <p>Curate includes features that may result in content being removed from your Apple Photos library if you confirm those actions.</p>
+    <p>You understand and agree that:</p>
+    <ul>
+      <li>album creation, album assignment, and favouriting actions can update your Apple Photos library directly;</li>
+      <li>deletion actions may move content into Apple's "Recently Deleted" area rather than permanently erasing it immediately, depending on Apple's system behaviour; and</li>
+      <li>Curate is not responsible for Apple's retention, restoration, or deletion rules after a photo-library action has been submitted to the system.</li>
+    </ul>
+  </section>
+
+  <section id="s4a">
+    <div class="section-number">Section 04A</div>
+    <h2>Curate Plus and In-App Purchases</h2>
+    <p>Curate may offer paid premium access through Apple in-app purchases. Current purchase options may include a monthly auto-renewable Curate Plus subscription and a lifetime non-consumable purchase.</p>
+    <p>Premium access may unlock features such as unlimited swipes, video sorting, quick-add album controls, Album Reorganiser access, and full favourites access. Premium feature availability can change over time, and we do not promise that every feature, label, or workflow will always remain available in the same form.</p>
+    <p>Purchases are handled by Apple through the App Store. Prices, billing period, taxes, trial eligibility, renewal terms, and other purchase details are shown in Apple's purchase flow before you confirm payment.</p>
+    <p>Monthly subscriptions renew automatically unless cancelled in accordance with Apple's rules. You can manage or cancel subscriptions through your Apple ID subscription settings. Deleting Curate does not automatically cancel an active subscription.</p>
+    <p>Lifetime purchases provide access to the applicable premium features for as long as Curate continues to support the lifetime purchase product and the App remains available and operable. A lifetime purchase is not a subscription and does not renew automatically.</p>
+    <p>Use the App's restore option or Apple's purchase restoration systems to restore eligible purchases on supported devices. Refund requests, billing disputes, and cancellation handling are managed by Apple and subject to Apple's policies.</p>
+  </section>
+
+  <section id="s5">
+    <div class="section-number">Section 05</div>
+    <h2>License</h2>
+    <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal or internal lawful use.</p>
+    <p>You may not:</p>
+    <ul>
+      <li>copy, modify, distribute, sell, lease, or sublicense the App except as allowed by law;</li>
+      <li>reverse engineer or attempt to extract source code from the App except to the extent allowed by law;</li>
+      <li>use the App in a way that interferes with its operation or security; or</li>
+      <li>use the App for unlawful, infringing, or abusive purposes.</li>
+    </ul>
+  </section>
+
+  <section id="s6">
+    <div class="section-number">Section 06</div>
+    <h2>Third-Party Services and Platforms</h2>
+    <p>The App may rely on third-party services or platforms, including:</p>
+    <ul>
+      <li>Apple Photos / PhotoKit;</li>
+      <li>Apple App Store / StoreKit for in-app purchases and purchase restoration; and</li>
+      <li>Firebase Crashlytics for crash and diagnostics reporting.</li>
+    </ul>
+    <p>Your use of those third-party services may also be governed by their own terms, policies, and platform rules.</p>
+  </section>
+
+  <section id="s7">
+    <div class="section-number">Section 07</div>
+    <h2>No Account Guarantee; Feature Changes</h2>
+    <p>We may add, remove, change, suspend, or discontinue features at any time. We do not guarantee that any feature, integration, or workflow will always remain available.</p>
+    <p>Settings or interface items that appear in the App may be experimental, incomplete, or subject to future implementation changes.</p>
+  </section>
+
+  <section id="s8">
+    <div class="section-number">Section 08</div>
+    <h2>Privacy</h2>
+    <p>Your use of the App is also subject to the Curate Privacy Policy:</p>
+    <div class="contact-block">
+      <a href="../privacy/">Curate Privacy Policy</a>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="section-number">Section 09</div>
+    <h2>Disclaimers</h2>
+    <p>The App is provided on an "as is" and "as available" basis to the fullest extent permitted by law.</p>
+    <p>We do not guarantee that:</p>
+    <ul>
+      <li>the App will always be uninterrupted, error-free, or bug-free;</li>
+      <li>the App will always preserve or correctly organise your content in every case;</li>
+      <li>any sorting, album, favourites, or deletion workflow will be error-free;</li>
+      <li>any paid feature will always remain available in the exact same form; or</li>
+      <li>the App will meet your exact needs or expectations.</li>
+    </ul>
+    <p>You are solely responsible for reviewing actions taken in the App and for deciding whether to maintain separate backups of your photo library.</p>
+  </section>
+
+  <section id="s10">
+    <div class="section-number">Section 10</div>
+    <h2>Limitation of Liability</h2>
+    <div class="legal-note">
+      <p>To the fullest extent permitted by law, Curate and its affiliates, licensors, and service providers will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, data, goodwill, or business opportunities, arising out of or related to your use of the App.</p>
+      <p>To the fullest extent permitted by law, our total liability for any claim relating to the App will not exceed the amount you paid for the App, if any, during the 12 months before the event giving rise to the claim.</p>
+      <p>Some jurisdictions do not allow certain limitations, so some of the above may not apply to you.</p>
+    </div>
+  </section>
+
+  <section id="s11">
+    <div class="section-number">Section 11</div>
+    <h2>Indemnity</h2>
+    <p>To the extent permitted by law, you agree to indemnify and hold harmless Curate and its affiliates, officers, employees, and service providers from claims, losses, liabilities, and expenses arising from:</p>
+    <ul>
+      <li>your misuse of the App;</li>
+      <li>your violation of these Terms; or</li>
+      <li>your violation of applicable law or third-party rights.</li>
+    </ul>
+  </section>
+
+  <section id="s12">
+    <div class="section-number">Section 12</div>
+    <h2>Termination</h2>
+    <p>We may suspend or terminate your access to the App if we reasonably believe you have violated these Terms or used the App in a harmful or unlawful way.</p>
+    <p>You may stop using the App at any time by uninstalling it. Uninstalling the App removes locally stored App data from that device but does not automatically cancel any active Apple-managed subscription.</p>
+  </section>
+
+  <section id="s13">
+    <div class="section-number">Section 13</div>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by the laws of the United Kingdom, except where consumer protection law requires otherwise.</p>
+  </section>
+
+  <section id="s14">
+    <div class="section-number">Section 14</div>
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. If we make material changes, we may update the effective date above and provide additional notice where appropriate.</p>
+  </section>
+
+  <aside class="support-callout" aria-label="Curate support">
+    <div>
+      <div class="section-number">Support</div>
+      <h2>Need help with Curate?</h2>
+      <p>Return to the main Curate site, read the Privacy Policy, or contact support if you have questions about the app or these Terms.</p>
+    </div>
+    <div class="callout-actions">
+      <a class="button button-primary" href="../../../#download">Download details</a>
+      <a class="button button-secondary" href="../privacy/">Read Privacy</a>
+    </div>
+  </aside>
+
+  <section id="s15">
+    <div class="section-number">Section 15</div>
+    <h2>Contact</h2>
+    <p>If you have questions about these Terms, contact:</p>
+    <div class="contact-block">
+      <a id="contact-email" href="#">myappsfuture@icloud.com</a>
+      <script>
+        var u='myappsfuture',d='icloud.com';
+        var el=document.getElementById('contact-email');
+        el.href='mailto:'+u+'@'+d;
+        el.textContent=u+'@'+d;
+      </script>
+    </div>
+  </section>
+
+  <div class="ornament">· · ·</div>
+
+</main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Curate. Photo organisation for iPhone.</span>
+    <div class="footer-links">
+      <a href="../../../">Home</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../help/">Support</a>
+      <a href="mailto:myappsfuture@icloud.com">Email</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
